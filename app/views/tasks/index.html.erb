@@ -22,7 +22,7 @@
       <ol>
         <% @list.each do |item| %>
           <li>
-            <span class="bold"><%= item %></span>
+            <a href="/tasks/<%= item[:id] %>"><span class="bold"><%= item[:name] %></span></a>
             <ul>
               <li>
                 Mark Complete
