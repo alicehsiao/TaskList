@@ -1,0 +1,42 @@
+<div class="container">
+  <header>
+    <h1>TASKLIST</h1>
+  </header>
+
+  <section class="center">
+    <section class="task-options">
+      <ul>
+        <li>
+          Add Task
+        </li>
+        <li>
+          All Tasks
+        </li>
+      </ul>
+    </section>
+  </section>
+
+  <section class="center">
+    <section class="task-list">
+      <h2>Your Tasks</h2>
+      <ol>
+        <% @list.each do |item| %>
+          <li>
+            <span class="bold"><%= item %></span>
+            <ul>
+              <li>
+                Mark Complete
+              </li>
+              <li>
+                Edit
+              </li>
+              <li>
+                Delete
+              </li>
+            </ul>
+          </li>
+        <% end %>
+      </ol>
+    </section>
+  </section>
+</div>
