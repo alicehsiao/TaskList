@@ -20,9 +20,9 @@
     <section class="task-list">
       <h2>Your Tasks</h2>
       <ol>
-        <% @list.each do |item| %>
+        <% @tasks.each do |item| %>
           <li>
-            <a href="/tasks/<%= item[:id] %>"><span class="bold"><%= item[:name] %></span></a>
+            <a href="/tasks/<%= item.id %>"><span class="bold"><%= item.name %></span></a>, complete by: <%= item.completion_date %>
             <ul>
               <li>
                 Mark Complete

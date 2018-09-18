@@ -70,3 +70,12 @@
 .container .task-list ul li:nth-child(2)::before, .container .task-list ul li:last-of-type::before{
   content: "|"
 }
+
+article {
+  background-color: tomato;
+  padding: 5rem;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 2rem;
+  font-weight: bold;
+}
