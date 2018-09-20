@@ -7,10 +7,10 @@
     <section class="task-options">
       <ul>
         <li>
-          Add Task
+          <%= link_to "Add Task", new_task_path %>
         </li>
         <li>
-          All Tasks
+          <%= link_to "All Tasks", tasks_path %>
         </li>
       </ul>
     </section>
@@ -22,16 +22,20 @@
       <ol>
         <% @tasks.each do |item| %>
           <li>
-            <a href="/tasks/<%= item.id %>"><span class="bold"><%= item.name %></span></a>, complete by: <%= item.completion_date %>
+            <% if item.status == "Mark Complete" %>
+              <a href="/tasks/<%= item.id %>"><span class="bold clear"><%= item.name %></span></a>
+            <% else %>
+              <a href="/tasks/<%= item.id %>"><span class="bold line-through"><%= item.name %></span></a>
+            <% end %>
             <ul>
               <li>
-                Mark Complete
+                <%= link_to item.status, complete_task_path(item.id), method: :patch %>
               </li>
               <li>
-                Edit
+                <%= link_to "Edit", edit_task_path(item.id) %>
               </li>
               <li>
-                Delete
+                <%= link_to "Delete", task_path(item.id), method: :delete, data: {confirm: "Are you sure?"} %>
               </li>
             </ul>
           </li>

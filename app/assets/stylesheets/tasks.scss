@@ -79,3 +79,15 @@ article {
   line-height: 2rem;
   font-weight: bold;
 }
+
+article p a {
+  padding-right: 1rem;
+}
+
+.center .task-list ol li .line-through {
+  text-decoration: line-through;
+}
+
+.center .task-list ol li .clear {
+  text-decoration: none;
+}
