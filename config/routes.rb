@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # routing to homepage (root_path will take you to homepage)
   root 'tasks#index'
 
   get '/tasks', to: 'tasks#index', as: 'tasks'

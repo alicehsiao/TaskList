@@ -90,4 +90,13 @@ article p a {
 
 .center .task-list ol li .clear {
   text-decoration: none;
+  color: inherit;
+}
+
+.center .task-list ol li .grey {
+  color: #D3D3D3;
+}
+
+article a:visited {
+  color: white;
 }

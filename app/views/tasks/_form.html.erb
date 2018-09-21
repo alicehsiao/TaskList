@@ -1,3 +1,5 @@
+<h1> <%= action_name %> </h1>
+
 <%= form_with model: @task, class: "new-task-form" do |f| %>
   <fieldset>
     <p>
@@ -7,9 +9,9 @@
 
     <p>
       <%= f.label :description %>
-      <%= f.text_field :description, value: @task.description %>
+      <%= f.text_field :description %>
     </p>
 
-    <%= f.submit "Submit", class: "task-button" %>
+    <%= f.submit button_title, class: "task-button" %>
   </fieldset>
 <% end %>

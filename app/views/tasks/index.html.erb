@@ -23,9 +23,9 @@
         <% @tasks.each do |item| %>
           <li>
             <% if item.status == "Mark Complete" %>
-              <a href="/tasks/<%= item.id %>"><span class="bold clear"><%= item.name %></span></a>
+              <%= link_to item.name, task_path(item.id), class: "bold clear" %>
             <% else %>
-              <a href="/tasks/<%= item.id %>"><span class="bold line-through"><%= item.name %></span></a>
+              <%= link_to item.name, task_path(item.id), class: "bold line-through grey" %>
             <% end %>
             <ul>
               <li>
