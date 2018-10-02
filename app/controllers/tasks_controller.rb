@@ -18,6 +18,10 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id].to_i)
+
+    if @task.nil?
+      render :notfound, status: :not_found
+    end
   end
 
   def create
